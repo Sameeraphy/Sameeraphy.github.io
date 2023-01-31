@@ -1,7 +1,44 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <style>
+      .title {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title" id="title"></div>
+
+    <script>
+      // The text to be typed
+      const name = "Sameera Jayathunge";
+
+      // The speed of typing (in milliseconds)
+      const typingSpeed = 200;
+
+      // Get the title element
+      const title = document.getElementById("title");
+
+      // Typing function
+      function typeName() {
+        let index = 0;
+        const interval = setInterval(function () {
+          title.innerHTML += name[index];
+          index++;
+          if (index === name.length) {
+            clearInterval(interval);
+          }
+        }, typingSpeed);
+      }
+
+      // Call the typing function
+      typeName();
+    </script>
+  </body>
 </html>
