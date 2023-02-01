@@ -53,12 +53,14 @@
       setTimeout(function () {
         title1.innerHTML = "";
         typeName(title1,name2);
+
+              // Wait for 5 seconds, then call the typing function for the second text
+        setTimeout(function () {
+          typeName(title2,name3);
+        }, 5000);
       }, 5000);
 
-      // Wait for 5 seconds, then call the typing function for the second text
-      setTimeout(function () {
-        typeName(title2,name3);
-      }, 5000);
+
 
     </script>
   </body>
