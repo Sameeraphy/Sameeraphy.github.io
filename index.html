@@ -16,6 +16,7 @@
         border-radius: 50%;
         overflow: hidden;
         position:absolute;
+        z-index: -1;
 
       }
 
@@ -49,8 +50,15 @@
       const profilePicture = document.querySelector(".profile-picture");
 
       setInterval(() => {
-        const x = Math.floor(Math.random() * window.innerWidth);
-        const y = Math.floor(Math.random() * window.innerHeight);
+        let x = Math.floor(Math.random() * window.innerWidth);
+        let y = Math.floor(Math.random() * window.innerHeight);
+        const profilePictureRect = profilePicture.getBoundingClientRect();
+        if (x + profilePictureRect.width > window.innerWidth) {
+          x = window.innerWidth - profilePictureRect.width;
+        }
+        if (y + profilePictureRect.height > window.innerHeight) {
+          y = window.innerHeight - profilePictureRect.height;
+        }
         profilePicture.style.left = x + "px";
         profilePicture.style.top = y + "px";
       }, 1000);
