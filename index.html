@@ -15,7 +15,7 @@
         height: 200px;
         border-radius: 50%;
         overflow: hidden;
-        position:relative;
+        position:absolute;
 
       }
 
@@ -45,6 +45,17 @@
     </div>
 
     <script>
+
+      const profilePicture = document.querySelector(".profile-picture");
+
+      setInterval(() => {
+        const x = Math.floor(Math.random() * window.innerWidth);
+        const y = Math.floor(Math.random() * window.innerHeight);
+        profilePicture.style.left = x + "px";
+        profilePicture.style.top = y + "px";
+      }, 1000);
+
+
       // The text to be typed
       const name1 = "Sameera Jayathunge";
 
