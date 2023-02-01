@@ -13,8 +13,7 @@
     </style>
   </head>
   <body>
-    <div class="title" id="title1"></div>
-    <div class="title" id="title1"></div>
+    <div class="title" id="title"></div>
 
     <script>
       // The text to be typed
@@ -24,13 +23,13 @@
       const typingSpeed = 200;
 
       // Get the title element
-      const title1 = document.getElementById("title1");
+      const title = document.getElementById("title");
 
       // Typing function
       function typeName() {
         let index = 0;
         const interval = setInterval(function () {
-          title1.innerHTML += name[index];
+          title.innerHTML += name[index];
           index++;
           if (index === name.length) {
             clearInterval(interval);
