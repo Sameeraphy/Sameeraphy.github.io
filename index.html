@@ -29,12 +29,12 @@
       const title = document.getElementById("title");
 
       // Typing function
-      function typeName() {
+      function typeName(text) {
         let index = 0;
         const interval = setInterval(function () {
-          title.innerHTML += name[index];
+          title.innerHTML += text[index];
           index++;
-          if (index === name.length) {
+          if (index === text.length) {
             clearInterval(interval);
           }
         }, typingSpeed);
