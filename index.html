@@ -13,26 +13,31 @@
     </style>
   </head>
   <body>
-    <div class="title" id="title"></div>
+    <div class="title" id="title1"></div>
+    <div class="title" id="title2"></div>
 
     <script>
       // The text to be typed
       const name1 = "Sameera Jayathunge";
 
       // The text to be typed
-      const name2 = "Sameera Jayathunge";
+      const name2 = "Full Stack Developer";
+
+      // The text to be typed
+      const name3 = "Self-taught";
 
       // The speed of typing (in milliseconds)
       const typingSpeed = 200;
 
-      // Get the title element
-      const title = document.getElementById("title");
+      // Get the title elements
+      const title = document.getElementById("title1");
+      const title2 = document.getElementById("title2");
 
       // Typing function
-      function typeName(text) {
+      function typeName(element,text) {
         let index = 0;
         const interval = setInterval(function () {
-          title.innerHTML += text[index];
+          element.innerHTML += text[index];
           index++;
           if (index === text.length) {
             clearInterval(interval);
@@ -41,13 +46,18 @@
       }
 
       // Call the typing function for the first text
-      typeName(name1);
+      typeName(title1,name1);
 
 
       // Wait for 5 seconds, then call the typing function for the second text
       setTimeout(function () {
         title.innerHTML = "";
-        typeName(name2);
+        typeName(title1,name2);
+      }, 5000);
+
+      // Wait for 5 seconds, then call the typing function for the second text
+      setTimeout(function () {
+        typeName(title2,name2);
       }, 5000);
 
     </script>
