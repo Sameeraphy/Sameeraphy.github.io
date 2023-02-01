@@ -39,17 +39,26 @@
       <div class="title" id="title2"></div>  
     </div>
 
-    <div>
+
       <div class="profile-picture">
         <img src="https://sameeraphy.github.io/assets/me.jpg" alt="Profile Picture">
       </div>
-    </div>
-
+      <div class="profile-picture">
+        <img src="https://sameeraphy.github.io/assets/me.jpg" alt="Profile Picture">
+      </div>
+      <div class="profile-picture">
+        <img src="https://sameeraphy.github.io/assets/me.jpg" alt="Profile Picture">
+      </div>
+      <div class="profile-picture">
+        <img src="https://sameeraphy.github.io/assets/me.jpg" alt="Profile Picture">
+      </div>
+  
     <script>
 
-      const profilePicture = document.querySelector(".profile-picture");
+      const profilePictures = document.querySelectorAll(".profile-picture");
 
       setInterval(() => {
+        profilePictures.forEach(profilePicture => {
         let x = Math.floor(Math.random() * window.innerWidth);
         let y = Math.floor(Math.random() * window.innerHeight);
         const profilePictureRect = profilePicture.getBoundingClientRect();
@@ -61,6 +70,7 @@
         }
         profilePicture.style.left = x + "px";
         profilePicture.style.top = y + "px";
+        });
       }, 1000);
 
 
