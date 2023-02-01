@@ -17,7 +17,10 @@
 
     <script>
       // The text to be typed
-      const name = "Sameera Jayathunge";
+      const name1 = "Sameera Jayathunge";
+
+      // The text to be typed
+      const name2 = "Sameera Jayathunge";
 
       // The speed of typing (in milliseconds)
       const typingSpeed = 200;
@@ -37,8 +40,16 @@
         }, typingSpeed);
       }
 
-      // Call the typing function
-      typeName();
+      // Call the typing function for the first text
+      typeName(name1);
+
+
+      // Wait for 5 seconds, then call the typing function for the second text
+      setTimeout(function () {
+        title.innerHTML = "";
+        typeName(name2);
+      }, 5000);
+
     </script>
   </body>
 </html>
